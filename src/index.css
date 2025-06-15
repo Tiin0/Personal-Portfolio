@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+.navbarBtn {
+    @apply relative 
+    no-underline 
+    text-black 
+    mx-10 
+    after:content-[''] 
+    after:absolute
+    after:left-0                    /* Underline of nav bar buttons on hover */
+    after:bottom-[-2px]
+    after:h-[3px] 
+    after:w-full 
+    after:scale-x-0 
+    after:bg-black 
+    after:transition-transform 
+    after:duration-300 
+    after:ease-in-out 
+    hover:after:scale-x-100 
+    after:origin-left
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }                                     /* Animation */
+  50% { 
+    transform: translateY(5px);
+  }
+}
+
+
+.animate-float {
+  animation: float 2s ease-in-out infinite; /* Define animation type and time */
+}
+
+.outlined-text {
+  color: transparent;
+  -webkit-text-stroke: 1px black; /* Just show border */
+}
+
+
+.skills {
+  @apply transition-all duration-500;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: -1;
+  left: -1;
+  @apply w-0 h-0 bg-blue-200 rounded-full transition-all duration-500;
+}
+
+.skills:hover::before {
+  @apply w-[300px] h-[300px];
+}
