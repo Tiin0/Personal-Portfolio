@@ -1,7 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
-import sunImg from '../Images/sun.jpg';
-import moonImg from '../Images/moon.png';
+import sunImg from '../Images/navbar/sun.jpg';
+import moonImg from '../Images/navbar/moon.png';
 
 function NavBar() {
     let [hours,setHours] = useState();
@@ -42,9 +42,10 @@ function NavBar() {
                 </div>
 
                 <div className=""> {/*Nav buttons*/}
-                    <a href='#about' className="navbarBtn text-black mx-10">About</a>
-                    <a href='' className="navbarBtn text-black mx-10">Skills</a>
-                    <a href='' className="navbarBtn text-black mx-10">Contacts</a>
+                    <a onClick={() => {const section = document.querySelector('#about');section?.scrollIntoView({ behavior: 'smooth' });}} className="navbarBtn text-black mx-10 cursor-pointer">About</a>
+                    <a onClick={() => {const section = document.querySelector('#skills');section?.scrollIntoView({ behavior: 'smooth' });}} className="navbarBtn text-black mx-10 cursor-pointer">Skills</a>
+                    <a onClick={() => {const section = document.querySelector('#projects');section?.scrollIntoView({ behavior: 'smooth' });}} className="navbarBtn text-black mx-10 cursor-pointer">Projects</a>
+                    <a onClick={() => {const section = document.querySelector('#contacts');section?.scrollIntoView({ behavior: 'smooth' });}} className="navbarBtn text-black mx-10 cursor-pointer">Contacts</a>
                 </div>
 
                     <div className={`w-[150px] h-[150px] flex transition-transform duration-500 origin-center translate-y-[75px]`} style={{ transform: `rotate(${lightModeAngle}deg)` }}> {/* Light container*/}

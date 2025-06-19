@@ -1,26 +1,35 @@
+import htmlImg from '../Images/skills/html.png';
+import cssImg from '../Images/skills/css.png';
+import tailwindImg from '../Images/skills/tailwind.png';
+import jsImg from '../Images/skills/js.png';
+import pythonImg from '../Images/skills/python.png';
+import reactImg from '../Images/skills/react.png';
+import nodeImg from '../Images/skills/nodejs.png';
 
 const mySkill = {
-    'html' : {img: '', title: 'Html'},
-    'css' : {img: '', title: 'Css'},
-    'tailwindcss' : {img: '', title: 'Tailwind'},
-    'javascript' : {img: '', title: 'Javascript'},          // Skills images and title
-    'python' : {img: '', title: 'Python'},
-    'react' : {img: '', title: 'React'},
-    'nodeJs' : {img: '', title: 'Node Js'}
+    'html' : {img: htmlImg, title: 'Html'},
+    'css' : {img: cssImg, title: 'Css'},
+    'tailwindcss' : {img: tailwindImg, title: 'Tailwind'},
+    'javascript' : {img: jsImg, title: 'Javascript'},          // Skills images and title
+    'python' : {img: pythonImg, title: 'Python'},
+    'react' : {img: reactImg, title: 'React'},
+    'nodeJs' : {img: nodeImg, title: 'Node Js'}
 }
 
 function Skills() {
     return (
-        <div className="w-full h-auto mt-50"> {/*Wrapper*/}
-            <div className="w-[80%] h-auto absolute left-1/2 -translate-x-1/2">
+        <div className="w-full h-auto mt-50 flex flex-col items-center"> 
+            <div className="w-[80%] h-auto">
                 <h1 data-aos='fade-down' className="font-extrabold text-6xl text-[#B8860B] text-center p-10">Skills</h1>
-                <div className="flex flex-wrap w-full h-auto gap-4 justify-center"> {/* Skills Container*/} 
+                <div id='skills' className="flex flex-wrap w-full h-auto gap-4 justify-center"> {/* Skills Container*/} 
                     {Object.entries(mySkill).map(([key, element]) => (      
-                        <div key={key} data-aos='fade-left' className="w-50 h-50 border border-black shadow-2xl flex items-center justify-center rounded-lg skills overflow-hidden">
-                            <h2 className="text-xl font-semibold text-gray-700 z-1">{element.title}</h2>
+                        <div key={key} data-aos='fade-left' className="w-50 h-50 border border-black shadow-2xl flex flex-col items-center justify-center rounded-lg skills overflow-hidden">
+                            <div className='w-[40%] h-[40%] z-1'>
+                                <img src={element.img} className='w-full h-full object-fit'></img>
+                            </div>
+                            <h2 className="text-xl font-semibold text-gray-700 z-1 mt-7">{element.title}</h2>
                         </div>
                     ))} {/*Creates skills child element*/}
-
                 </div>
             </div>
         </div>
