@@ -11,7 +11,7 @@ const projects = {
     live_project : 'https://tiin0.github.io/Character-counter',
     github_link : 'https://github.com/tiin0/Character-counter'
   },
-  char_counter2 : {
+  char_counter2 : { // must delete
     title : 'Character counter',
     description : 'This website allows you to input a word, phrase, or full dialogue to analyze the most frequently used words and provides an estimated reading time. Its fully responsive design ensures a perfect display on any device, from smartphones to desktops.',
     live_project : 'https://tiin0.github.io/Character-counter',
@@ -22,14 +22,14 @@ const projects = {
 function Projects() {                                                                           
   return (
     <div id='projects' className="w-full h-auto mt-50 flex flex-col items-center">
-      <h1 data-aos='fade-up' className="text-6xl font-extrabold text-[#B8860B] text-center pt-10 pb-10">
+      <h1 data-aos='fade-down' className="text-6xl font-extrabold text-[#B8860B] text-center pt-10 pb-10">
         Projects
       </h1>
 
-      <div className="flex-1 flex justify-around gap-10 w-full flex-wrap">
+      <div className="flex-1 flex justify-around gap-10 w-[80%] flex-wrap">
         {/* Loop over projects and create element for it */}
         {Object.entries(projects).map(([key,value]) => ( 
-             <div key={key} data-aos='fade-up' className="relative border-black border-2 max-w-[500px] min-h-[65vh] justify-self-center rounded-lg flex flex-col items-center pt-4 pb-30"> {/* Aggiunta padding-bottom */}
+             <div key={key} data-aos='fade-up' className="relative border-black border-2 xs:w-full xs:max-w-[400px] xl:max-w-[500px] xl:w-[600px] min-h-[65vh] justify-self-center rounded-lg flex flex-col items-center pt-4 pb-30"> {/* Aggiunta padding-bottom */}
           <img src={characterCounterImg} className="rounded-t-lg border-b-4 w-full" />
           
           <h1 className='text-2xl text-center mt-4 font-bold'>{value.title}</h1>

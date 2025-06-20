@@ -19,11 +19,11 @@ const mySkill = {
 function Skills() {
     return (
         <div className="w-full h-auto mt-50 flex flex-col items-center"> 
-            <div className="w-[80%] h-auto">
+            <div className="xs:w-[90%] sm:w-[80%] h-auto">
                 <h1 data-aos='fade-down' className="font-extrabold text-6xl text-[#B8860B] text-center p-10">Skills</h1>
                 <div id='skills' className="flex flex-wrap w-full h-auto gap-4 justify-center"> {/* Skills Container*/} 
                     {Object.entries(mySkill).map(([key, element]) => (      
-                        <div key={key} data-aos='fade-left' className="w-50 h-50 border border-black shadow-2xl flex flex-col items-center justify-center rounded-lg skills overflow-hidden">
+                        <div key={key} data-aos='fade-left' className="lg:w-50 lg:h-50 xs:w-45 xs:h-45 border border-black shadow-2xl flex flex-col items-center justify-center rounded-lg skills overflow-hidden">
                             <div className='w-[40%] h-[40%] z-1'>
                                 <img src={element.img} className='w-full h-full object-fit'></img>
                             </div>

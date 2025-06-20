@@ -55,3 +55,14 @@
 .skills:hover::before {
   @apply w-[300px] h-[300px];
 }
+
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-mini: 0;
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 635px;
+  --breakpoint-md: 774px;
+  --breakpoint-lg: 975px;
+  --breakpoint-xl: 1400px;
+}

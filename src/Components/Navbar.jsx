@@ -28,7 +28,7 @@ function NavBar() {
 
     return (
         <div>
-            <div className="w-full h-[80px] flex justify-around items-center overflow-hidden bg-white shadow">
+            <div className="w-full h-[80px] flex justify-around items-center overflow-hidden bg-white shadow md:visible xs:invisible">
                 <div className="w-[60px] h-[60px] rounded-full relative border-black border-2"> {/* Clock */}
                     
                     {/* Hours */}

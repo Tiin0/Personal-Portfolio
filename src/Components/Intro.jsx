@@ -18,10 +18,10 @@ function Intro() {
     }, []);
 
     return (
-        <div className='w-full min-h-[calc(100vh-80px)] flex justify-center '> 
-            <div data-aos="fade-up" className='w-full h-auto  flex flex-col justify-center items-center'>
-                <h1 className="font-extrabold text-7xl text-center tracking-wide ">Hi!, my name is <strong className='text-[#B8860B]'>Tino</strong></h1>
-                <p className='font-medium text-2xl mt-6 text-center tracking-wide'>I'm a {age} years old boy interested in learning new things with big ambition's</p>
+        <div className='w-full min-h-[calc(100vh-80px)] flex justify-center'> 
+            <div data-aos="fade-up" className='lg:w-full h-auto flex flex-col justify-center items-center xs:w-[80%] sm:w-[90%]'>
+                <h1 className="font-extrabold sm:text-7xl text-center tracking-wide xs:text-6xl">Hi!, my name is <strong className='text-[#B8860B]'>Tino</strong></h1>
+                <p className='font-medium sm:text-2xl mt-6 text-center tracking-wide xs:text-xl'>I'm a {age} years old boy interested in learning new things with big ambition's</p>
                 {/*Should redirect on About when clicked*/}
                 <div className='w-[60px] h-[60px] rounded-full border-2 mt-20 cursor-pointer' onClick={() => {const section = document.querySelector('#about');section?.scrollIntoView({ behavior: 'smooth' });}}><img src={arrow} className='w-[60%] h-[60%] relative top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 animate-float'/></div>
             </div>
