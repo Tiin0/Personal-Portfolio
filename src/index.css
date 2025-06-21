@@ -41,23 +41,17 @@
 
 
 .skills {
-  @apply transition-all duration-500;
+  @apply relative overflow-hidden transition-all duration-500;
 }
 
+/* animazione sfondo */
 .skills::before {
   content: '';
-  position: absolute;
-  top: -1;
-  left: -1;
-  @apply w-0 h-0 bg-blue-200 rounded-full transition-all duration-500;
+  @apply absolute w-0 h-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-200 rounded-full transition-all duration-500 z-0;
 }
 
 .skills:hover::before {
   @apply w-[300px] h-[300px];
-}
-
-.displayNone {
-  display: none;
 }
 
 

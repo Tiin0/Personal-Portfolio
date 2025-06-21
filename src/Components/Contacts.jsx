@@ -2,7 +2,7 @@
 
 function Contacts() {
   return (
-    <div id='contacts' className="mt-[50px] w-full h-auto relative flex flex-col items-center mb-4">
+    <div id='contacts' className="mt-50 w-full h-auto relative flex flex-col items-center mb-4">
       <h1 className="text-6xl font-extrabold text-[#B8860B] text-center pt-10 pb-10">Contacts</h1>
 
       <div className="xs:w-[80%] sm:max-w-[600px]">

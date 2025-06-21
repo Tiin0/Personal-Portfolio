@@ -16,7 +16,7 @@ const projects = {
 
 function Projects() {                                                                           
   return (
-    <div id='projects' className="w-full h-auto mt-[50px] flex flex-col items-center ">
+    <div id='projects' className="w-full h-auto mt-50 flex flex-col items-center ">
       <h1 data-aos='fade-down' className="text-6xl font-extrabold text-[#B8860B] text-center pt-10 pb-10">
         Projects
       </h1>

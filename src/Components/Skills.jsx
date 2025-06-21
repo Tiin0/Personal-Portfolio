@@ -18,7 +18,7 @@ const mySkill = {
 
 function Skills() {
   return (
-    <div className="w-full h-auto mt-[50px] flex flex-col items-center">
+    <div className="w-full h-auto mt-50 flex flex-col items-center">
       <div className="xs:w-[90%] sm:w-[80%] h-auto">
         <h1 data-aos="fade-down" className="font-extrabold text-6xl text-[#B8860B] text-center p-10">
           Skills

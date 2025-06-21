@@ -27,7 +27,7 @@ function NavBar() {
   }, []);
 
   return (
-    <div className="min-w-full h-[80px] flex justify-between ml:justify-around items-center shadow overflow-hidden px-4">
+    <div className="w-full h-[80px] flex justify-between ml:justify-around items-center shadow overflow-hidden px-4">
       <div className="w-[100px] h-[100px] md:w-[150px] md:h-[150px] flex justify-center items-center shrink-0">
         <div className="w-[55px] h-[55px] rounded-full relative border-black border-2 shrink-0">
           {/* Clock */}
