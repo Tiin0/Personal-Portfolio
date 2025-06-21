@@ -29,7 +29,7 @@ function Projects() {
       <div className="flex-1 flex justify-around gap-10 w-[80%] flex-wrap">
         {/* Loop over projects and create element for it */}
         {Object.entries(projects).map(([key,value]) => ( 
-             <div key={key} data-aos='fade-up' className="relative border-black border-2 xs:w-full xs:max-w-[400px] xl:max-w-[500px] xl:w-[600px] min-h-[65vh] justify-self-center rounded-lg flex flex-col items-center pt-4 pb-30"> {/* Aggiunta padding-bottom */}
+             <div key={key} data-aos='fade-up' className="relative border-black border-2 xs:w-full xs:max-w-[400px] xl:max-w-[500px] xl:w-[600px] justify-self-center rounded-lg flex flex-col items-center pt-4 pb-30"> {/* Aggiunta padding-bottom */}
           <img src={characterCounterImg} className="rounded-t-lg border-b-4 w-full" />
           
           <h1 className='text-2xl text-center mt-4 font-bold'>{value.title}</h1>

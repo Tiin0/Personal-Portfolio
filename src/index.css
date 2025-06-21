@@ -56,13 +56,18 @@
   @apply w-[300px] h-[300px];
 }
 
+.displayNone {
+  display: none;
+}
+
 
 @theme {
   --breakpoint-*: initial;
   --breakpoint-mini: 0;
-  --breakpoint-xs: 375px;
+  --breakpoint-xs: 340px;
   --breakpoint-sm: 635px;
   --breakpoint-md: 774px;
+  --breakpoint-ml: 843px;
   --breakpoint-lg: 975px;
   --breakpoint-xl: 1400px;
 }

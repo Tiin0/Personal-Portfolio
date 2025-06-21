@@ -1,6 +1,6 @@
 import React from "react";
 import {useState, useEffect} from "react";
-import sunImg from '../Images/navbar/sun.jpg';
+import sunImg from '../Images/navbar/sun.png';
 import moonImg from '../Images/navbar/moon.png';
 
 function NavBar() {
@@ -28,30 +28,33 @@ function NavBar() {
 
     return (
         <div>
-            <div className="w-full h-[80px] flex justify-around items-center overflow-hidden bg-white shadow md:visible xs:invisible">
-                <div className="w-[60px] h-[60px] rounded-full relative border-black border-2"> {/* Clock */}
+            <div className="w-full h-[80px] flex md:justify-around xs:justify-between items-center overflow-hidden shadow">
+                <div className="xs:w-[100px] xs:h-[100px] md:w-[150px] md:h-[150px] flex justify-center items-center shrink-0">
+                    <div className="w-[55px] h-[55px] rounded-full relative border-black border-2 shrink-0"> {/* Clock */}
                     
                     {/* Hours */}
-                    <div className={`absolute w-[4px] h-[15px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom`}  style={{ transform: `rotate(${hours}deg)` }}/>
+                    <div className={`absolute w-[4px] h-[14px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom`}  style={{ transform: `rotate(${hours}deg)` }}/>
 
                     {/* Minuts */}
-                    <div className={`absolute w-[2px] h-[20px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom`} style={{ transform: `rotate(${minutes}deg)` }}/>
+                    <div className={`absolute w-[2px] h-[17px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom`} style={{ transform: `rotate(${minutes}deg)` }}/>
                     
                      {/* Seconds */}
-                    <div className={`absolute w-[1px] h-[25px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom`} style={{ transform: `rotate(${seconds}deg)` }}/>
+                    <div className={`absolute w-[1px] h-[20px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom`} style={{ transform: `rotate(${seconds}deg)` }}/>
                 </div>
+                </div>
+        
 
-                <div className=""> {/*Nav buttons*/}
+                <div className="xs:collapse ml:visible"> {/*Nav buttons*/}
                     <a onClick={() => {const section = document.querySelector('#about');section?.scrollIntoView({ behavior: 'smooth' });}} className="navbarBtn text-black mx-10 cursor-pointer">About</a>
                     <a onClick={() => {const section = document.querySelector('#skills');section?.scrollIntoView({ behavior: 'smooth' });}} className="navbarBtn text-black mx-10 cursor-pointer">Skills</a>
                     <a onClick={() => {const section = document.querySelector('#projects');section?.scrollIntoView({ behavior: 'smooth' });}} className="navbarBtn text-black mx-10 cursor-pointer">Projects</a>
                     <a onClick={() => {const section = document.querySelector('#contacts');section?.scrollIntoView({ behavior: 'smooth' });}} className="navbarBtn text-black mx-10 cursor-pointer">Contacts</a>
                 </div>
 
-                    <div className={`w-[150px] h-[150px] flex transition-transform duration-500 origin-center translate-y-[75px]`} style={{ transform: `rotate(${lightModeAngle}deg)` }}> {/* Light container*/}
-                        <div className="w-full h-full"> {/* container */}
+                    <div className={`w-[150px] h-[150px] flex transition-transform duration-500 origin-center translate-y-[75px] shrink-0`} style={{ transform: `rotate(${lightModeAngle}deg)` }}> {/* Light container*/}
+                        <div className="w-full h-full relative shrink-0"> {/* container */}
                             <img 
-                                className="absolute left-1/2 w-[50px] h-[50px] object-cover -translate-x-1/2 -translate-y-1/2 cursor-pointer" 
+                                className="absolute left-1/2 w-[60px] h-[60px] object-cover -translate-x-1/2 -translate-y-1/2 cursor-pointer" 
                                 src={sunImg}
                                 onClick={() => setLightModeAngle(90)}
                                 alt="Sun" 
