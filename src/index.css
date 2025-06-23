@@ -44,7 +44,6 @@
   @apply relative overflow-hidden transition-all duration-500;
 }
 
-/* animazione sfondo */
 .skills::before {
   content: '';
   @apply absolute w-0 h-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-200 rounded-full transition-all duration-500 z-0;
