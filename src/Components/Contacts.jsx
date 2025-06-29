@@ -18,14 +18,14 @@ function Contacts() {
           rel="noopener noreferrer"
           className="font-extrabold navbarBtn"
         >
-          <span className="text-white">Github</span>
+          <span className="dark:text-white">Github</span>
         </a>
 
         <a
           href="konstanty.fara20@gmail.com"
           className="font-extrabold navbarBtn"
         >
-          <span className="text-white">Email</span>
+          <span className="dark:text-white">Email</span>
         </a>
       </div>
     </div>
