@@ -25,7 +25,8 @@
 
  📸 Preview
 
-<img width="700" alt="character-counter-dark" src="https://github.com/user-attachments/assets/bd5f8062-bb08-4d38-ae70-18771ffa594e" />
+<img width="700" alt="Screenshot 2025-06-29 alle 20 49 02" src="https://github.com/user-attachments/assets/6598264a-685d-4a6c-aad0-47bc0b42e7d8" />
+
 
 
 ---
