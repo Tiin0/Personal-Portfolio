@@ -22,7 +22,7 @@ function Contacts() {
         </a>
 
         <a
-          href="konstanty.fara20@gmail.com"
+          href="mailto:esempio@email.com"
           className="font-extrabold navbarBtn"
         >
           <span className="dark:text-white">Email</span>
