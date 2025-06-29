@@ -12,7 +12,8 @@
     after:h-[3px] 
     after:w-full 
     after:scale-x-0 
-    after:bg-black 
+    after:bg-black
+    dark:after:bg-white 
     after:transition-transform 
     after:duration-300 
     after:ease-in-out 
@@ -39,20 +40,7 @@
   -webkit-text-stroke: 1px black; /* Just show border */
 }
 
-
-.skills {
-  @apply relative overflow-hidden transition-all duration-500;
-}
-
-.skills::before {
-  content: '';
-  @apply absolute w-0 h-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-200 rounded-full transition-all duration-500 z-0;
-}
-
-.skills:hover::before {
-  @apply w-[300px] h-[300px];
-}
-
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --breakpoint-*: initial;
@@ -60,7 +48,24 @@
   --breakpoint-xs: 340px;
   --breakpoint-sm: 635px;
   --breakpoint-md: 774px;
+  --breakpoint-ml: 887px;
   --breakpoint-ml: 843px;
   --breakpoint-lg: 975px;
   --breakpoint-xl: 1400px;
+}
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+
+  html {
+    @apply dark:text-white dark:border-white;
+  }
+
+  a {
+    @apply dark:text-white
+  }
+
+
 }

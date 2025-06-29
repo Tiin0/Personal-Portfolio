@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className="dark:bg-[#1f1f1f]">
       <nav>
         <NavBar/>
       </nav>

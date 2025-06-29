@@ -4,6 +4,7 @@ import sunImg from '../Images/navbar/sun.png';
 import moonImg from '../Images/navbar/moon.png';
 
 function NavBar() {
+  const [darkMode, setDarkMode] = useState(false);
   let [hours, setHours] = useState();
   let [minutes, setMinutes] = useState();
   let [seconds, setSeconds] = useState();
@@ -26,21 +27,29 @@ function NavBar() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark'); // <html class="dark">
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
-    <div className="w-full h-[80px] flex justify-between ml:justify-around items-center shadow overflow-hidden px-4">
+    <div className="w-full h-[80px] flex justify-between ml:justify-around items-center shadow dark:shadow-white  overflow-hidden px-4">
       <div className="w-[100px] h-[100px] md:w-[150px] md:h-[150px] flex justify-center items-center shrink-0">
-        <div className="w-[55px] h-[55px] rounded-full relative border-black border-2 shrink-0">
+        <div className="w-[55px] h-[55px] rounded-full relative border-black border-2 shrink-0 dark:border-white">
           {/* Clock */}
           <div
-            className="absolute w-[4px] h-[14px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom"
+            className="absolute w-[4px] h-[14px] bottom-[50%] left-[50%] bg-black dark:bg-white translate-x-[-50%] origin-bottom"
             style={{ transform: `rotate(${hours}deg)` }}
           />
           <div
-            className="absolute w-[2px] h-[17px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom"
+            className="absolute w-[2px] h-[17px] bottom-[50%] left-[50%] bg-black dark:bg-white translate-x-[-50%] origin-bottom"
             style={{ transform: `rotate(${minutes}deg)` }}
           />
           <div
-            className="absolute w-[1px] h-[20px] bottom-[50%] left-[50%] bg-black translate-x-[-50%] origin-bottom"
+            className="absolute w-[1px] h-[20px] bottom-[50%] left-[50%] bg-black dark:bg-white translate-x-[-50%] origin-bottom"
             style={{ transform: `rotate(${seconds}deg)` }}
           />
         </div>
@@ -55,7 +64,7 @@ function NavBar() {
           }}
           className="navbarBtn text-black mx-10 cursor-pointer"
         >
-          About
+          <h3 className='dark:text-white'>About</h3>
         </a>
         <a
           onClick={() => {
@@ -64,7 +73,7 @@ function NavBar() {
           }}
           className="navbarBtn text-black mx-10 cursor-pointer"
         >
-          Skills
+          <h3 className='dark:text-white'>Skills</h3>
         </a>
         <a
           onClick={() => {
@@ -73,7 +82,7 @@ function NavBar() {
           }}
           className="navbarBtn text-black mx-10 cursor-pointer"
         >
-          Projects
+          <h3 className='dark:text-white'>Projects</h3>
         </a>
         <a
           onClick={() => {
@@ -82,13 +91,14 @@ function NavBar() {
           }}
           className="navbarBtn text-black mx-10 cursor-pointer"
         >
-          Contacts
+          <h3 className='dark:text-white'>Contacts</h3>
         </a>
       </div>
 
       <div
         className="flex-grow max-w-[150px] h-[150px] flex transition-transform duration-500 origin-center translate-y-[75px]"
         style={{ transform: `rotate(${lightModeAngle}deg)` }}
+        onClick={() => setDarkMode(!darkMode)}
       >
         {/* Light container */}
         <div className="w-full h-full relative">
