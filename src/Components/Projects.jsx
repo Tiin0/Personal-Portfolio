@@ -53,16 +53,16 @@ function Projects() {
   }, []);
 
   return (
-    <div id="projects" className="w-full h-auto mt-24 flex flex-col items-center">
+    <div id="projects" className="w-full h-auto mt-50 flex flex-col items-center">
       <h1
         data-aos="fade-down"
-        className="text-6xl font-extrabold text-[#B8860B] text-center pt-10 pb-10"
+        className="text-6xl font-extrabold text-[#B8860B] text-center pt-10 pb-10 font-calSans tracking-wider"
       >
         Projects
       </h1>
 
-      <div data-aos='fade-up' className="w-full h-auto flex xs:flex-wrap ml:flex-nowrap justify-center gap-6">
-        {Object.entries(projects).map(([key, value], i) => {
+      <div data-aos='fade-up' className="w-full h-auto flex xs:flex-wrap ml:flex-nowrap justify-center gap-6 ">
+        {Object.entries(projects).map(([key, value], i) => { // creates project container (max 3/4 for this type of style)
           const imageUrl = isDark ? value.darkImg : value.image;
 
           return (
@@ -100,8 +100,8 @@ function Projects() {
       </div>
 
       <div className="ml:w-[600px] w-[80%] h-auto border-[1px] rounded-md mt-10 relative">
-        <h1 className="font-bold text-center text-2xl mt-2">{title}</h1>
-        <p className="text-center max-w-[90%] mt-4 mx-auto">{description}</p>
+        <h1 className="font-bold text-center text-2xl mt-2 font-calSans tracking-wider">{title}</h1>
+        <p className="text-center max-w-[90%] mt-4 mx-auto font-adlam">{description}</p>
         <div className="flex w-full gap-4 justify-center mt-4 mb-4">
             <a href={liveLink} target="_blank" rel="noopener noreferrer overflow-hidden">
             <img

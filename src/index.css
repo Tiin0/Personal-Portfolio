@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Cal+Sans&family=Lobster&display=swap');
 @import "tailwindcss";
+
+html.dark {
+  scrollbar-color: #ffffff #202020;
+}
+
+
+
+@theme {
+  --font-lobster: "Lobster", sans-serif; 
+  --font-adlam: "ADLaM Display", sans-serif; 
+  --font-calSans: "Cal Sans", sans-serif;
+}
+
 
 .navbarBtn {
     @apply relative 
     no-underline 
     text-black 
+    font-adlam
     mx-10 
     after:content-[''] 
     after:absolute

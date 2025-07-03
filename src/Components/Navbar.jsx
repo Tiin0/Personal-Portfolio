@@ -16,7 +16,7 @@ function NavBar() {
       const hours = now.getHours() % 12;
       const minutes = now.getMinutes();
       const seconds = now.getSeconds();
-
+                                                // gets the your current time for the clock
       setHours((hours + minutes / 60) * 30);
       setMinutes(minutes * 6);
       setSeconds(seconds * 6);
@@ -29,7 +29,7 @@ function NavBar() {
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add('dark'); // <html class="dark">
+      document.documentElement.classList.add('dark'); // adds dark mode
     } else {
       document.documentElement.classList.remove('dark');
     }

@@ -22,11 +22,11 @@ function Skills() {
   return (
     <div className="w-full h-auto mt-50 flex flex-col items-center">
       <div className="xs:w-[90%] sm:w-[80%] h-auto">
-        <h1 data-aos="fade-down" className="font-extrabold text-6xl text-[#B8860B] text-center p-10">
+        <h1 data-aos="fade-down" className="font-extrabold text-6xl text-[#B8860B] text-center p-10 font-calSans tracking-wider">
           Skills
         </h1>
         <div id="skills" className="flex flex-wrap w-full h-auto gap-4 justify-center">
-          {Object.entries(mySkill).map(([key, element]) => (
+          {Object.entries(mySkill).map(([key, element]) => ( // creates skill container 
             <div
               key={key}
               data-aos="fade-left"
@@ -35,7 +35,7 @@ function Skills() {
             <div className="w-[40%] h-[40%] z-10 transition-transform duration-300 group-hover:-translate-y-5">
               <img src={element.img} className="w-full h-full object-contain" />
             </div>
-            <h2 className="absolute bottom-6 text-xl font-semibold text-gray-700 dark:text-white opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-0">
+            <h2 className="absolute bottom-6 text-xl font-semibold text-gray-700 dark:text-white opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 font-adlam">
               {element.title}
             </h2>
           </div>
