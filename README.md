@@ -25,8 +25,7 @@
 
  📸 Preview
 
-<img width="700" alt="Screenshot 2025-06-29 alle 20 49 02" src="https://github.com/user-attachments/assets/6598264a-685d-4a6c-aad0-47bc0b42e7d8" />
-
+![Screenshot 2025-07-03 alle 20 12 28](https://github.com/user-attachments/assets/916f579c-6c62-4d7a-adc5-e549688927c8)
 
 
 ---
