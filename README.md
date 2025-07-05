@@ -34,6 +34,9 @@
 
 This project is personal and educational. Third-party libraries (like AOS) are used under their respective open-source licenses.
 
+This project uses Vite, which is distributed under the MIT License.  
+You can find Vite's license here: [https://github.com/vitejs/vite/blob/main/LICENSE.md](https://github.com/vitejs/vite/blob/main/LICENSE.md)
+
 ---
 
 📦 Installation
