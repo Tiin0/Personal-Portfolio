@@ -1,5 +1,6 @@
 import characterCounterImg from '../Images/projects/character-counter.png';
-import ThreeGamesReactImg from '../Images/projects/Three-games-React.png';
+import unfinishedProjectImg from '../Images/projects/unfinished.png';
+import unfinishedProjectDarkImg from '../Images/projects/dark-mode/unfinished-dark.png';
 import characterCounterDarkImg from '../Images/projects/dark-mode/character-counter-dark.png';
 
 const projects = {
@@ -13,20 +14,20 @@ const projects = {
     darkImg: characterCounterDarkImg
   },
   ThreeGamesReact: {
-    title: 'Three-games-React',
-    description: 'About This is a union of three games (Wordle copy, Memory Match, Math Rush) in a single website made with React JS',
-    live_project: 'https://tiin0.github.io/Three-games-React/',
-    github_link: 'https://github.com/Tiin0/Three-games-React',
-    image: ThreeGamesReactImg,
-    darkImg: ThreeGamesReactImg
+    title: 'Not done yet',
+    description: 'Sorry, i am still working on this project...',
+    live_project: '',
+    github_link: '',
+    image: unfinishedProjectImg,
+    darkImg: unfinishedProjectDarkImg
   },
   char_counter3: {
-    title: 'Character Counter',
-    description: 'This website allows you to input a word, phrase, or full dialogue to analyze the most frequently used words and provides an estimated reading time. Its fully responsive design ensures a perfect display on any device, from smartphones to desktops.',
-    live_project: 'https://tiin0.github.io/Character-counter',
-    github_link: 'https://github.com/tiin0/Character-counter',
-    image: characterCounterImg,
-    darkImg: characterCounterDarkImg
+    title: 'Not done yet',
+    description: 'Sorry, i am still working on this project...',
+    live_project: '',
+    github_link: '',
+    image: unfinishedProjectImg,
+    darkImg: unfinishedProjectDarkImg
   },
 };
 
