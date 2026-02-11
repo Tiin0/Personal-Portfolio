@@ -8,7 +8,6 @@
 
 - ⚛️ **React** – for building a dynamic and modular UI
 - 🎨 **Tailwind CSS** – for clean, responsive styling
-- ✨ [**AOS (Animate On Scroll)**](https://github.com/michalsnik/aos) – for smooth scroll animations
 - ⚡ **Vite** – for a lightning-fast development environment
 
 ---
