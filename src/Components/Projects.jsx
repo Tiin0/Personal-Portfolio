@@ -26,13 +26,13 @@ function Projects() {
   return (
     <div id="projects" className="w-full h-auto mt-50 flex flex-col items-center">
       <h1
-        data-aos="fade-down"
-        className="text-6xl font-extrabold text-[#B8860B] text-center pt-10 pb-10 font-calSans tracking-wider"
+        data-animation="fade-down"
+        className="text-6xl font-extrabold text-[#B8860B] text-center pt-10 pb-10 font-calSans tracking-wider opacity-0"
       >
         Projects
       </h1>
 
-      <div data-aos="fade-up" className="w-full h-auto flex xs:flex-wrap ml:flex-nowrap justify-center gap-6">
+      <div data-animation="fade-right" className="w-full h-auto flex xs:flex-wrap ml:flex-nowrap justify-center gap-6 opacity-0">
         {Object.entries(projects).map(([key, value], i) => {
           const imageUrl = isDark ? value.darkImg : value.image;
           return (

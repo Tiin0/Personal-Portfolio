@@ -6,7 +6,6 @@ html.dark {
 }
 
 
-
 @theme {
   --font-lobster: "Lobster", sans-serif; 
   --font-adlam: "ADLaM Display", sans-serif; 
@@ -22,7 +21,7 @@ html.dark {
     mx-10 
     after:content-[''] 
     after:absolute
-    after:left-0                    /* Underline of nav bar buttons on hover */
+    after:left-0                 
     after:bottom-[-2px]
     after:h-[3px] 
     after:w-full 
@@ -36,23 +35,82 @@ html.dark {
     after:origin-left
 }
 
+@keyframes fade-up {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
-  }                                     /* Animation */
+  }                                     
   50% { 
     transform: translateY(5px);
   }
 }
 
+.fade-up {
+  animation: fade-up 1s ease-out forwards;
+}
+
+.fade-down {
+  animation: fade-down 1s ease-out forwards;
+}
+
+.fade-left {
+  animation: fade-left 1s ease-out forwards;
+}
+
+.fade-right {
+  animation: fade-right 1s ease-out forwards;
+}
 
 .animate-float {
-  animation: float 2s ease-in-out infinite; /* Define animation type and time */
+  animation: float 2s ease-in-out infinite; 
 }
 
 .outlined-text {
   color: transparent;
-  -webkit-text-stroke: 1px black; /* Just show border */
+  -webkit-text-stroke: 1px black; 
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

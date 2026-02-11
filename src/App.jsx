@@ -5,7 +5,14 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Contacts from "./Components/Contacts";
 
+import {useEffect } from "react";
+import startObserver from "./data/observer.js";
+
 function App() {
+
+  useEffect(() => {
+    startObserver();
+  })
 
 
   return (
